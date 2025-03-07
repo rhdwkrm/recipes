@@ -1,0 +1,15 @@
+{
+    "aliases": [],
+    "recipes": {
+        "imperium/capitalizer": [
+            "1.1"
+        ]
+    },
+    "branch": "master",
+    "is_contrib": true,
+    "_links": {
+        "repository": "gitlab.3wmedia.dev/rachid.wakrim/symfony-recipes",
+        "origin_template": "{package}:{version}@gitlab.3wmedia.dev/rachid.wakrim/symfony-recipes:master",
+        "recipe_template": "https://gitlab.3wmedia.dev/api/v4/projects/1398/repository/files/{package_dotted}.{version}.json/raw?ref=master"
+    }
+}

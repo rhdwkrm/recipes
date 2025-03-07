@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "imperium/capitalizer": {
+            "manifest": {
+                "env": {
+                    "#1": "Enable Capitalizer",
+                    "CAPITALIZER_ENABLED": "true",
+                    "#2": "API key for Capitalizer",
+                    "CAPITALIZER_API_KEY": "YOUR_API_KEY"
+                }
+            },
+            "files": {
+                "config/routes/app/routes.yaml": {
+                    "contents": [
+                        "capitalize:",
+                        "  path: /capitalize",
+                        "  controller: App\\Controller\\HomeController::capitalize",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4e94bc325ef71983a798c891199909030037f2fc"
+        }
+    }
+}
