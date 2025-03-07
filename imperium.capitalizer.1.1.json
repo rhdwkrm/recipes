@@ -1,7 +1,14 @@
 {
     "manifests": {
         "imperium/capitalizer": {
-            
+            "manifest": {
+                "env": {
+                    "#1": "Enable Capitalizer",
+                    "CAPITALIZER_ENABLED": "true",
+                    "#2": "API key for Capitalizer",
+                    "CAPITALIZER_API_KEY": "YOUR_API_KEY"
+                }
+            },
             "files": {
                 "config/routes/app/routes.yaml": {
                     "contents": [
