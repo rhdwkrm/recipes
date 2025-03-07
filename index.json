@@ -8,16 +8,8 @@
     "branch": "main",
     "is_contrib": true,
     "_links": {
-        "repository": "gitlab.3wmedia.dev/rachid.wakrim/symfony-recipes",
-        "origin_template": "{package}:{version}@gitlab.3wmedia.dev/rachid.wakrim/symfony-recipes:main",
-        "recipe_template": "https://gitlab.3wmedia.dev/api/v4/projects/1398/repository/files/{package_dotted}.{version}.json/raw?ref=main"
-    }
-}
-{
-
-    "_links": {
-        "repository": "github.com/your-github-account-name/your-recipes-repository",
-        "origin_template": "{package}:{version}@github.com/your-github-account-name/your-recipes-repository:main",
-        "recipe_template": "https://api.github.com/repos/your-github-account-name/your-recipes-repository/contents/{package_dotted}.{version}.json"
+        "repository": "github.com/rhdwkrm/recipes",
+        "origin_template": "{package}:{version}@github.com/rhdwkrm/recipes:main",
+        "recipe_template": "https://api.github.com/repos/rhdwkrm/recipes/contents/{package_dotted}.{version}.json"
     }
 }
