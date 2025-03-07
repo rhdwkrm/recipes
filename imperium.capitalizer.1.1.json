@@ -1,26 +1,37 @@
+
+
 {
-    "manifests": {
-        "imperium/capitalizer": {
-            "manifest": {
-                "env": {
-                    "#1": "Enable Capitalizer",
-                    "CAPITALIZER_ENABLED": "true",
-                    "#2": "API key for Capitalizer",
-                    "CAPITALIZER_API_KEY": "YOUR_API_KEY"
-                }
-            },
-            "files": {
-                "config/routes/app/routes.yaml": {
+  "manifests": {
+    "imperium/capitalizer": {
+      "manifest": {
+        "bundles": {
+          "eduMedia\\GarApiBundle\\eduMediaGarApiBundle": [
+            "all"
+          ]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        },
+        "env": {
+          "GAR_DISTRIBUTOR_ID": "000000000_0000000000000000",
+          "GAR_SSL_CERT": "/path/to/cert.pem",
+          "GAR_SSL_KEY": "/path/to/cert.key"
+        }
+      },
+      "files": {
+                "config/packages/edumedia_gar_api.yaml": {
                     "contents": [
-                        "capitalize:",
-                        "  path: /capitalize",
-                        "  controller: App\\Controller\\HomeController::capitalize",
-                        ""
+                        "edumedia_gar_api:",
+                        "  distributor_id: '%env(GAR_DISTRIBUTOR_ID)%'",
+                        "  ssl_cert: '%env(GAR_SSL_CERT)%'",
+                        "  ssl_key: '%env(GAR_SSL_KEY)%'",
+                        "  cache_directory: '%kernel.cache_dir%/gar-cache'",
+                        "  remote_env: 'preprod'"
                     ],
                     "executable": false
                 }
             },
-            "ref": "4e94bc325ef71983a798c891199909030037f2fc"
-        }
+      "ref": "ad610a54abdf2f5563841a4ce4b3c3cb29a7d0ff"
     }
+  }
 }
